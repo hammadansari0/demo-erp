@@ -1,0 +1,147 @@
+/* Center the card on screen */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #a5c8ff;
+}
+
+/* Card styling */
+.login-card {
+  width: 350px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Input group with flex */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  /* color: black; */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.input-group i {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: black;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* Register button */
+.register-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #88c3ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #89c1ff;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Toggle show/hide password button */
+
+.toggle-btn {
+  background: none;
+  border: none;
+  outline: none;
+  /* color: #007bff; */
+  cursor: pointer;
+  font-size: 12px;
+}
+.toggle-btn:focus,
+.toggle-btn:active{
+  /* background: none; */
+  border: none;
+  outline: none;
+}
+/*------ Settings ------*/
+.container {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container .eye {
+  position: absolute;
+  animation: keyframes-fill .5s;
+}
+
+.container .eye-slash {
+  position: absolute;
+  animation: keyframes-fill .5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .eye {
+  display: none;
+}
+
+.container input:checked ~ .eye-slash {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
